@@ -57,9 +57,21 @@ namespace Learnin_Async
             listBox1.Items.Add("return from DoSomethingAsync");
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Add($"Abby Start. {DateTime.Now: hh:mm:ss.fff}");
+            Task<string> t1 = TaskReturnsStringAsync("Abby", 6);
+            listBox1.Items.Add($"Abby Return. {DateTime.Now: hh:mm:ss.fff}");
+
+            listBox1.Items.Add($"Barbie Start. {DateTime.Now: hh:mm:ss.fff}");
+            Task<string> t2 = TaskReturnsStringAsync("Barbie", 3);
+            listBox1.Items.Add($"Barbie Return. {DateTime.Now: hh:mm:ss.fff}");
+        }
+
         private async Task<string> TaskReturnsStringAsync(string sender, int delay)
         {
             await Task.Run(() => Thread.Sleep(delay * 1000)); //or await Task.Delay(delay * 1000);
+            listBox1.Items.Add($"{sender} Finish. {DateTime.Now: hh:mm:ss.fff}");
             return $"Hello {sender}";
         }
 
