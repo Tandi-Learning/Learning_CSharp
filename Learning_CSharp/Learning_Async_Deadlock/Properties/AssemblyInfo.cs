@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Race_Condition")]
+[assembly: AssemblyTitle("Learning_Async_Deadlock")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("ICFI")]
-[assembly: AssemblyProduct("Race_Condition")]
+[assembly: AssemblyProduct("Learning_Async_Deadlock")]
 [assembly: AssemblyCopyright("Copyright © ICFI 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ac177165-7c92-4e32-b56c-d57e83e66d43")]
+[assembly: Guid("dd9bbb28-8f97-4ffa-ace4-75a1c81e37d8")]
 
 // Version information for an assembly consists of the following four values:
 //

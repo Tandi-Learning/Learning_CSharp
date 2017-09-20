@@ -17,11 +17,10 @@ namespace Learnin_Async
             listBox1.Items.Add($"{ShowDate()} Case A - getting message ... ");
 
             string message1 = await TaskReturnsStringAsync("Abby", 3);
-            string message2 = await TaskReturnsStringAsync("Bob", 2);
-            string message3 = await TaskReturnsStringAsync("Chris", 1);
-
             listBox1.Items.Add($"{ShowDate()} message received = {message1}");
+            string message2 = await TaskReturnsStringAsync("Bob", 2);
             listBox1.Items.Add($"{ShowDate()} message received = {message2}");
+            string message3 = await TaskReturnsStringAsync("Chris", 1);                       
             listBox1.Items.Add($"{ShowDate()} message received = {message3}");
             listBox1.Items.Add("---------------------------------------------");
         }
