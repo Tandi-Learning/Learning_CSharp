@@ -91,5 +91,11 @@ namespace Learnin_Async
         {
             return $"{DateTime.Now.ToString("hh:mm:ss.fff")}";
         }
+
+        private void btnStartCancel_Click(object sender, EventArgs e)
+        {
+            StartCancel startCancel = new StartCancel();
+            startCancel.Show();
+        }
     }
 }
