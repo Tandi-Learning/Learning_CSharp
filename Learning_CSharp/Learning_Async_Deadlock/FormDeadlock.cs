@@ -42,7 +42,9 @@ namespace Learning_Async_Deadlock
 
         private static async Task<String> ReadHelloWorldAsync(string value)
         {
-            await Task.Delay(TimeSpan.FromMilliseconds(6000));
+            // use ConfigureAwait(false) will tell the process to use thread pool 
+            // this will prevent deadlock
+            await Task.Delay(TimeSpan.FromMilliseconds(6000)).ConfigureAwait(false);
             return $"hello {value}";
         }
 
