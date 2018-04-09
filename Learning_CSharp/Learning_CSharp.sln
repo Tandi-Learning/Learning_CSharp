@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learnin_Async", "Learnin_Async\Learnin_Async.csproj", "{1EAE93E3-4128-4AD0-AF5A-E84E4B914C95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async", "Learnin_Async\Async.csproj", "{1EAE93E3-4128-4AD0-AF5A-E84E4B914C95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning_Async_Deadlock", "Learning_Async_Deadlock\Learning_Async_Deadlock.csproj", "{DD9BBB28-8F97-4FFA-ACE4-75A1C81E37D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async_Deadlock", "Learning_Async_Deadlock\Async_Deadlock.csproj", "{DD9BBB28-8F97-4FFA-ACE4-75A1C81E37D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async_console", "Async_console\Async_console.csproj", "{1F059A4D-39A7-4D6E-8F58-DE49E5E73D3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DD9BBB28-8F97-4FFA-ACE4-75A1C81E37D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD9BBB28-8F97-4FFA-ACE4-75A1C81E37D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD9BBB28-8F97-4FFA-ACE4-75A1C81E37D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F059A4D-39A7-4D6E-8F58-DE49E5E73D3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F059A4D-39A7-4D6E-8F58-DE49E5E73D3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F059A4D-39A7-4D6E-8F58-DE49E5E73D3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F059A4D-39A7-4D6E-8F58-DE49E5E73D3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
