@@ -15,6 +15,7 @@ public class Teacher
     public string FirstName { get; private set; }
     public string LastName { get; private set; }
     public string Subject { get; private set; }
+    public string FullName => $"{FirstName} {LastName}";
 
     public void Deconstruct(
         out string firstName,
@@ -72,6 +73,15 @@ public class PatternSample
 
     public bool IsInSeventhGradeMathProperty(Student student)
     {
-        return student is { GradeLevel: 7, HomeRoomTeacher: { Subject: "Math" } };
+        return student is Student { GradeLevel: 7, HomeRoomTeacher: { Subject: "Math" } };
+    }
+
+    public string WhatIsPerson(object person)
+    {
+        return person switch {
+            Student s => s.GradeLevel == 7 && s.HomeRoomTeacher.Subject == "Math" ? $"Yes" : $"No {s.FullName} is in grade {s.GradeLevel} {s.HomeRoomTeacher.Subject} student",
+            Teacher t => t.Subject == "Math" ? $"Yes" : $"No {t.FullName} is {t.Subject} teacher",
+            _ => "Unknown person"
+        };
     }
 }

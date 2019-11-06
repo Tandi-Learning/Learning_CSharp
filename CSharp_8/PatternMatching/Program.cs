@@ -52,6 +52,10 @@ namespace PatternMatching
                 }
                 case '3': 
                 {
+                    WriteLine($"{John.FullName} is Math teacher ? {sample.WhatIsPerson(John)}");
+                    WriteLine($"{Jane.FullName} is Math teacher ? {sample.WhatIsPerson(Jane)}");
+                    WriteLine($"{Diana.FullName} is 7th grade Math student ? {sample.WhatIsPerson(Diana)}");
+                    WriteLine($"{Scarlet.FullName} is 7th grade Math student ? {sample.WhatIsPerson(Scarlet)}");
                     break;
                 }
                 case '4': 
