@@ -79,9 +79,18 @@ public class PatternSample
     public string WhatIsPerson(object person)
     {
         return person switch {
-            Student s => s.GradeLevel == 7 && s.HomeRoomTeacher.Subject == "Math" ? $"Yes" : $"No {s.FullName} is in grade {s.GradeLevel} {s.HomeRoomTeacher.Subject} student",
-            Teacher t => t.Subject == "Math" ? $"Yes" : $"No {t.FullName} is {t.Subject} teacher",
+            Student s when s.GradeLevel == 6 => s.HomeRoomTeacher.Subject == "Math" ? $"Yes" : $"No {s.FullName} is a grade {s.GradeLevel} {s.HomeRoomTeacher.Subject} student",
+            Student s => s.GradeLevel == 7 && s.HomeRoomTeacher.Subject == "Math" ? $"Yes" : $"No {s.FullName} is a grade {s.GradeLevel} {s.HomeRoomTeacher.Subject} student",
+            Teacher t => t.Subject == "Math" ? $"Yes" : $"No {t.FullName} is a {t.Subject} teacher",
             _ => "Unknown person"
+        };
+    }
+
+    public string WhatIsPersonWithTuple(object person1, object person2)
+    {
+        return (person1, person2) switch {
+            (Student s, Teacher t) => s.GradeLevel == 7 && t.Subject == "Math" ? "Yes" : $"No {s.FullName} is a grade {s.GradeLevel} {t.Subject} student",
+            _ => "No data provided"
         };
     }
 }

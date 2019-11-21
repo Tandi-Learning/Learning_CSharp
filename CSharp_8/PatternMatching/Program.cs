@@ -5,6 +5,12 @@ namespace PatternMatching
 {
     class Program
     {
+        static PatternSample sample = new PatternSample();
+        static Teacher John = new Teacher("John", "Doe", "Math");
+        static Teacher Jane = new Teacher("Jane", "Doe", "Biology");
+        static Student Diana = new Student("Diana", "Wonder", John, 7);
+        static Student Scarlet = new Student("Scarlet", "Clark", Jane, 7);
+        static Student Logan = new Student("Logan", "Sunarto", John, 5);
         static void Main(string[] args)
         {
             var key = ' ';
@@ -31,11 +37,6 @@ namespace PatternMatching
 
         static void ProcessResponse(Char key)
         {
-            PatternSample sample = new PatternSample();
-            Teacher John = new Teacher("John", "Doe", "Math");
-            Teacher Jane = new Teacher("John", "Doe", "Biology");
-            Student Diana = new Student("Diana", "Wonder", John, 7);
-            Student Scarlet = new Student("Scarlet", "Clark", Jane, 7);
             switch(key)
             {
                 case '1': 
@@ -52,14 +53,18 @@ namespace PatternMatching
                 }
                 case '3': 
                 {
-                    WriteLine($"{John.FullName} is Math teacher ? {sample.WhatIsPerson(John)}");
-                    WriteLine($"{Jane.FullName} is Math teacher ? {sample.WhatIsPerson(Jane)}");
-                    WriteLine($"{Diana.FullName} is 7th grade Math student ? {sample.WhatIsPerson(Diana)}");
-                    WriteLine($"{Scarlet.FullName} is 7th grade Math student ? {sample.WhatIsPerson(Scarlet)}");
+                    WriteLine($"Is {John.FullName} a Math teacher ? {sample.WhatIsPerson(John)}");
+                    WriteLine($"Is {Jane.FullName} a Math teacher ? {sample.WhatIsPerson(Jane)}");
+                    WriteLine($"Is {Diana.FullName} a 7th grade Math student ? {sample.WhatIsPerson(Diana)}");
+                    WriteLine($"Is {Scarlet.FullName} a 7th grade Math student ? {sample.WhatIsPerson(Scarlet)}");
+                    WriteLine($"Is {Logan.FullName} a 6th grade Math student ? {sample.WhatIsPerson(Logan)}");
                     break;
                 }
                 case '4': 
                 {
+                    WriteLine($"Is {Logan.FullName} a 7th grade Math student ? {sample.WhatIsPersonWithTuple(Logan, Jane)}");
+                    WriteLine($"Is {Scarlet.FullName} a 7th grade Math student ? {sample.WhatIsPersonWithTuple(Scarlet, John)}");
+                    WriteLine($"Is {Scarlet.FullName} a 7th grade XYZ student ? {sample.WhatIsPersonWithTuple(Scarlet, null)}");
                     break;
                 }
                 default: 
