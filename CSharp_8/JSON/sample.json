@@ -1,0 +1,36 @@
+{
+  "webpage": {
+    "id": 1082,
+    "template_id": 1,
+    "section": "",
+    "title": "Welcome to my custom page",
+    "url": "/welcome-to-my-custom-page",
+    "status": "live",
+    "metadata": {
+      "seo_title": "Welcome to my custom page",
+      "seo_description": "",
+      "seo_image": null,
+      "fb_title": "Welcome to my custom page",
+      "fb_description": "",
+      "fb_image": null,
+      "tw_title": "Welcome to my custom page",
+      "tw_description": "",
+      "tw_image": null,
+      "keyword": "Say Hello to my little friend"
+    },
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "About",
+        "url": "/about"
+      },
+      {
+        "name": "Welcome to my custom page",
+        "url": "/welcome-page"
+      }
+    ]
+  }
+}
