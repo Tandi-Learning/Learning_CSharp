@@ -4,11 +4,11 @@ using static System.Console;
 
 namespace JSON
 {
-    public class JSONSample
+    public class Utf8JsonReaderSample
     {
-        public void Utf8JsonReader()
+        public void Run()
         {
-            var data = File.ReadAllBytes("sample.json");        
+            var data = File.ReadAllBytes("sample.json");
             var jsonReader = new Utf8JsonReader(data);
 
             while (jsonReader.Read())
@@ -19,8 +19,8 @@ namespace JSON
 
         private string GetTokenDesc(Utf8JsonReader jsonReader)
         {
-            return 
-            jsonReader.TokenType switch 
+            return
+            jsonReader.TokenType switch
             {
                 JsonTokenType.StartObject => "START OBJECT",
                 JsonTokenType.EndObject => "END OBJECT",
@@ -33,7 +33,7 @@ namespace JSON
                 JsonTokenType.True => $"BOOL: {jsonReader.GetBoolean()}",
                 JsonTokenType.False => $"BOOL: {jsonReader.GetBoolean()}",
                 JsonTokenType.Null => "NULL",
-                _ => "UNIDENTIFIED"
+                _ => $"UNHANDLED TOKEN {jsonReader.TokenType}"
             };
         }
     }

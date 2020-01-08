@@ -5,7 +5,8 @@ namespace JSON
 {
     class Program
     {
-        static JSONSample jsonSample = new JSONSample();
+        static Utf8JsonReaderSample utf8JsonSample = new Utf8JsonReaderSample();
+        static JsonDocumentSample jsonDocSample = new JsonDocumentSample();
 
         static void Main(string[] args)
         {
@@ -24,6 +25,7 @@ namespace JSON
             WriteLine("C# 8 Pattern Matching");
             WriteLine("-----------------------------");
             WriteLine("1. Utf8JsonReader");
+            WriteLine("2. JsonDocument");
             WriteLine("-----------------------------");
             WriteLine("Q. Quit");
             WriteLine();
@@ -35,11 +37,12 @@ namespace JSON
             {
                 case '1':
                 {
-                    jsonSample.Utf8JsonReader();
+                    utf8JsonSample.Run();
                     break;
                 }
                 default:
                 {
+                    jsonDocSample.Run();
                     break;
                 }
 
